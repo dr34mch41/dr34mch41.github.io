@@ -130,12 +130,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -152,6 +152,91 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dr34mch41.github.io/2026/02/13/python-ctk%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ChaiQinZheng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dr34mch41的部落阁">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | dr34mch41的部落阁">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/02/13/python-ctk%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">Python + CTK 开发环境安装</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-02-13 10:09:29 / Modified: 10:18:33" itemprop="dateCreated datePublished" datetime="2026-02-13T10:09:29+08:00">2026-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="安装最新-Python（带-tk-支持）"><a href="#安装最新-Python（带-tk-支持）" class="headerlink" title="安装最新 Python（带 tk 支持）"></a>安装最新 Python（带 tk 支持）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install python@3.12 tkinter</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>截止文章发布时最新</p>
+</blockquote>
+<h1 id="创建目录和虚拟环境"><a href="#创建目录和虚拟环境" class="headerlink" title="创建目录和虚拟环境"></a>创建目录和虚拟环境</h1><p>假设目录为 <code>pyctk</code>，虚拟环境名称也是 <code>pyctk</code>。</p>
+<h2 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m venv pyctk</span><br></pre></td></tr></table></figure>
+
+<h2 id="激活虚拟环境"><a href="#激活虚拟环境" class="headerlink" title="激活虚拟环境"></a>激活虚拟环境</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> pyctk/bin/activate</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意：</strong> 每次打开新终端都需要执行激活命令。</p>
+</blockquote>
+<h1 id="安装-CustomTkinter"><a href="#安装-CustomTkinter" class="headerlink" title="安装 CustomTkinter"></a>安装 CustomTkinter</h1><p>在激活的虚拟环境里执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先升级工具链，避免兼容问题</span></span><br><span class="line">pip install --upgrade pip setuptools wheel</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 CustomTkinter（推荐直接安装最新版）</span></span><br><span class="line">pip install customtkinter --upgrade</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装pyinstaller"><a href="#安装pyinstaller" class="headerlink" title="安装pyinstaller"></a>安装pyinstaller</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -383,7 +468,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h1><p><a href="mailto:&#107;&#116;&#x64;&#x63;&#x2e;&#117;&#115;&#99;&#112;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;">ktdc.uscp@gmail.com</a></p>
+          <h1 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h1><p><a href="mailto:&#x6b;&#x74;&#x64;&#99;&#46;&#117;&#115;&#99;&#112;&#64;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">ktdc.uscp@gmail.com</a></p>
 <h1 id="Team"><a href="#Team" class="headerlink" title="Team"></a><em>Team</em></h1><p><a target="_blank" rel="noopener" href="https://huggingface.co/uscp">huggingface</a><br><a target="_blank" rel="noopener" href="https://github.com/Underground-shit-code-production">github</a></p>
 
       
