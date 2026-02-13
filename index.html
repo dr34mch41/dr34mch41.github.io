@@ -130,7 +130,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -152,6 +152,159 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dr34mch41.github.io/2026/02/13/python-ctk%E7%8E%AF%E5%A2%83%E8%B0%83%E8%AF%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ChaiQinZheng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dr34mch41的部落阁">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | dr34mch41的部落阁">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/02/13/python-ctk%E7%8E%AF%E5%A2%83%E8%B0%83%E8%AF%95/" class="post-title-link" itemprop="url">Python + CTK 环境调试</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-02-13 10:20:41 / Modified: 10:43:18" itemprop="dateCreated datePublished" datetime="2026-02-13T10:20:41+08:00">2026-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h1><p>保存为 <code>test.py</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> customtkinter <span class="keyword">as</span> ctk</span><br><span class="line"></span><br><span class="line">ctk.set_appearance_mode(<span class="string">&quot;System&quot;</span>)  <span class="comment"># &quot;System&quot; / &quot;Light&quot; / &quot;Dark&quot;</span></span><br><span class="line">ctk.set_default_color_theme(<span class="string">&quot;blue&quot;</span>)  <span class="comment"># &quot;blue&quot; / &quot;dark-blue&quot; / &quot;green&quot;</span></span><br><span class="line"></span><br><span class="line">app = ctk.CTk()</span><br><span class="line">app.geometry(<span class="string">&quot;400x300&quot;</span>)</span><br><span class="line">app.title(<span class="string">&quot;CustomTkinter 测试&quot;</span>)</span><br><span class="line"></span><br><span class="line">label = ctk.CTkLabel(app, text=<span class="string">&quot;Hello macOS！&quot;</span>, font=(<span class="string">&quot;Arial&quot;</span>, <span class="number">24</span>))</span><br><span class="line">label.pack(pady=<span class="number">40</span>)</span><br><span class="line"></span><br><span class="line">button = ctk.CTkButton(app, text=<span class="string">&quot;点击我&quot;</span>, command=<span class="keyword">lambda</span>: label.configure(text=<span class="string">&quot;你点我了！&quot;</span>))</span><br><span class="line">button.pack(pady=<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">app.mainloop()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/pyctktest.png" alt="testing"></p>
+<h1 id="打包成为可执行文件"><a href="#打包成为可执行文件" class="headerlink" title="打包成为可执行文件"></a>打包成为可执行文件</h1><p>使用 PyInstaller</p>
+<h2 id="最简单尝试（目录版，调试用）"><a href="#最简单尝试（目录版，调试用）" class="headerlink" title="最简单尝试（目录版，调试用）"></a>最简单尝试（目录版，调试用）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller --windowed \</span><br><span class="line">        --name <span class="string">&quot;我的工具&quot;</span> \</span><br><span class="line">        --icon <span class="string">&quot;app.icns&quot;</span> \</span><br><span class="line">        main.py</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--windowed</code></td>
+<td>macOS GUI 程序专用（等同于 <code>--noconsole</code>）</td>
+</tr>
+</tbody></table>
+<p><strong>生成结果</strong>：<code>dist/我的工具.app</code>（可直接双击运行）</p>
+<h2 id="推荐方案（单文件-干净）"><a href="#推荐方案（单文件-干净）" class="headerlink" title="推荐方案（单文件 + 干净）"></a>推荐方案（单文件 + 干净）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller --onefile --windowed \</span><br><span class="line">    --name <span class="string">&quot;MyTool&quot;</span> \</span><br><span class="line">    --add-data <span class="string">&quot;<span class="subst">$(python3 -c &#x27;import customtkinter; print(customtkinter.__path__[0])</span>&#x27;):customtkinter&quot;</span> \</span><br><span class="line">    --hidden-import customtkinter \</span><br><span class="line">    --hidden-import tkinter \</span><br><span class="line">    --icon <span class="string">&quot;app.icns&quot;</span> \</span><br><span class="line">    --clean \</span><br><span class="line">    main.py</span><br></pre></td></tr></table></figure>
+
+<p><strong>关键选项说明</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--onefile</code></td>
+<td>生成单个可执行文件（macOS 会生成 .app 包结构）</td>
+</tr>
+<tr>
+<td><code>--add-data</code></td>
+<td>显式加入 customtkinter 资源（字体、主题 JSON），防止界面崩坏</td>
+</tr>
+<tr>
+<td><code>--hidden-import</code></td>
+<td>强制包含 tkinter 和 customtkinter（分析器可能漏掉）</td>
+</tr>
+</tbody></table>
+<h2 id="如果有额外资源文件（图片、json、字体等）"><a href="#如果有额外资源文件（图片、json、字体等）" class="headerlink" title="如果有额外资源文件（图片、json、字体等）"></a>如果有额外资源文件（图片、json、字体等）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller --onefile --windowed \</span><br><span class="line">    --add-data <span class="string">&quot;images:images&quot;</span> \</span><br><span class="line">    --add-data <span class="string">&quot;themes:themes&quot;</span> \</span><br><span class="line">    --add-data <span class="string">&quot;<span class="subst">$(python3 -c &#x27;import customtkinter; print(customtkinter.__path__[0])</span>&#x27;):customtkinter&quot;</span> \</span><br><span class="line">    --hidden-import customtkinter \</span><br><span class="line">    --hidden-import PIL._tkinter_finder \   <span class="comment"># 如果用了 Pillow 显示图片</span></span><br><span class="line">    main.py</span><br></pre></td></tr></table></figure>
+
+<h1 id="macOS常见问题"><a href="#macOS常见问题" class="headerlink" title="macOS常见问题"></a>macOS常见问题</h1><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>现象</th>
+<th>解决方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>双击 .app 闪退 &#x2F; 无反应</td>
+<td>Finder 启动崩溃，Terminal 运行正常</td>
+<td>–windowe –osx-bundle-identifier “com.yourname.mytool”, 检查 Python 是否 Homebrew｜</td>
+</tr>
+<tr>
+<td>界面丑 &#x2F; 无圆角 &#x2F; 主题丢失</td>
+<td>打包后变回原生 tk 丑陋风格</td>
+<td>加 –add-data 把 customtkinter 整个目录加进去</td>
+</tr>
+<tr>
+<td>缺少模块（ModuleNotFoundError）</td>
+<td>运行时报 tkinter 或 customtkinter 找不到</td>
+<td>加 –hidden-import tkinter –hidden-import customtkinter</td>
+</tr>
+<tr>
+<td>图标不生效</td>
+<td>.icns 不显示</td>
+<td>图标文件必须是 .icns 格式，用 Preview.app 转换</td>
+</tr>
+<tr>
+<td>体积过大（&gt;100MB）</td>
+<td>包含了很多无用依赖</td>
+<td>用 –exclude-module 排除不用的（如 matplotlib、numpy 等）</td>
+</tr>
+<tr>
+<td>Gatekeeper 阻止运行</td>
+<td>“来自身份不明的开发者”</td>
+<td>自签名：codesign –force –deep –sign - dist&#x2F;MyTool.app</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -468,7 +621,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h1><p><a href="mailto:&#x6b;&#x74;&#x64;&#99;&#46;&#117;&#115;&#99;&#112;&#64;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">ktdc.uscp@gmail.com</a></p>
+          <h1 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h1><p><a href="mailto:&#x6b;&#116;&#x64;&#99;&#46;&#x75;&#x73;&#99;&#112;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">ktdc.uscp@gmail.com</a></p>
 <h1 id="Team"><a href="#Team" class="headerlink" title="Team"></a><em>Team</em></h1><p><a target="_blank" rel="noopener" href="https://huggingface.co/uscp">huggingface</a><br><a target="_blank" rel="noopener" href="https://github.com/Underground-shit-code-production">github</a></p>
 
       
