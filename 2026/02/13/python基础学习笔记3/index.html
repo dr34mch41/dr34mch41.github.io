@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"dr34mch41.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="运算符 含义 示例 C&#x2F;C++ 是否相同    &#x3D;&#x3D; 相等 x &#x3D;&#x3D; 5 相同   !&#x3D; 不相等 x !&#x3D; “hello” 相同   &gt; &#x2F; &gt;&#x3D; 大于 &#x2F; 大于等于 age &gt;&#x3D; 18 相同   &lt; &#x2F; &lt;&#x3D; 小于 &#x2F; 小">
+    <meta name="description" content="if &#x2F; elif &#x2F; else12345678910111213141516171819202122# exam1if age &gt;&#x3D; 18:    print(&quot;成人&quot;)else:    print(&quot;未成年&quot;)# exam2score &#x3D; int(input(&quot;请输入分数（0-100）：&quot;))if score">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础学习笔记3">
 <meta property="og:url" content="https://dr34mch41.github.io/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/index.html">
 <meta property="og:site_name" content="dr34mch41的部落阁">
-<meta property="og:description" content="运算符 含义 示例 C&#x2F;C++ 是否相同    &#x3D;&#x3D; 相等 x &#x3D;&#x3D; 5 相同   !&#x3D; 不相等 x !&#x3D; “hello” 相同   &gt; &#x2F; &gt;&#x3D; 大于 &#x2F; 大于等于 age &gt;&#x3D; 18 相同   &lt; &#x2F; &lt;&#x3D; 小于 &#x2F; 小">
+<meta property="og:description" content="if &#x2F; elif &#x2F; else12345678910111213141516171819202122# exam1if age &gt;&#x3D; 18:    print(&quot;成人&quot;)else:    print(&quot;未成年&quot;)# exam2score &#x3D; int(input(&quot;请输入分数（0-100）：&quot;))if score">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-02-13T04:39:54.000Z">
-<meta property="article:modified_time" content="2026-02-13T04:40:48.045Z">
+<meta property="article:modified_time" content="2026-02-13T06:20:18.509Z">
 <meta property="article:author" content="ChaiQinZheng">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -110,7 +110,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -123,6 +123,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#if-elif-else"><span class="nav-number">1.</span> <span class="nav-text">if &#x2F; elif &#x2F; else</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%88%99"><span class="nav-number">1.1.</span> <span class="nav-text">基本规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.2.</span> <span class="nav-text">比较运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%86%99%E6%B3%95-%E5%AE%B9%E6%98%93%E8%B8%A9%E7%9A%84%E5%9D%91"><span class="nav-number">1.3.</span> <span class="nav-text">常见写法 &amp; 容易踩的坑</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -197,7 +198,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2026-02-13 12:39:54 / Modified: 12:40:48" itemprop="dateCreated datePublished" datetime="2026-02-13T12:39:54+08:00">2026-02-13</time>
+      <time title="Created: 2026-02-13 12:39:54 / Modified: 14:20:18" itemprop="dateCreated datePublished" datetime="2026-02-13T12:39:54+08:00">2026-02-13</time>
     </span>
 
   
@@ -209,7 +210,15 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><table>
+    <div class="post-body" itemprop="articleBody"><h1 id="if-elif-else"><a href="#if-elif-else" class="headerlink" title="if &#x2F; elif &#x2F; else"></a>if &#x2F; elif &#x2F; else</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># exam1</span></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;成人&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;未成年&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># exam2</span></span><br><span class="line">score = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入分数（0-100）：&quot;</span>))</span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;优秀&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">80</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;良好&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;及格&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;不及格&quot;</span>)</span><br><span class="line"><span class="comment"># elif 的数量没有限制，相当于 C/C++ 的 else if 链</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># exam3</span></span><br><span class="line"><span class="keyword">if</span> user <span class="keyword">and</span> user.is_active:</span><br><span class="line">    <span class="comment"># 如果 user 为 None 或 False，就不会去访问 .is_active</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;用户在线&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h2><ul>
+<li>条件后面一定要写冒号 <code>:</code></li>
+<li>条件不需要写小括号（写也合法，但几乎没人写）</li>
+<li>代码块靠缩进（通常 4 个空格）来界定范围</li>
+<li>没有 <code>{}</code>，所以缩进错误会直接报错（<code>IndentationError</code>）</li>
+</ul>
+<h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><table>
 <thead>
 <tr>
 <th>运算符</th>
@@ -219,52 +228,98 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>&#x3D;&#x3D;</td>
+<td><code>==</code></td>
 <td>相等</td>
-<td>x &#x3D;&#x3D; 5</td>
+<td><code>x == 5</code></td>
 <td>相同</td>
 </tr>
 <tr>
-<td>!&#x3D;</td>
+<td><code>!=</code></td>
 <td>不相等</td>
-<td>x !&#x3D; “hello”</td>
+<td><code>x != &quot;hello&quot;</code></td>
 <td>相同</td>
 </tr>
 <tr>
-<td>&gt; &#x2F; &gt;&#x3D;</td>
+<td><code>&gt; / &gt;=</code></td>
 <td>大于 &#x2F; 大于等于</td>
-<td>age &gt;&#x3D; 18</td>
+<td><code>age &gt;= 18</code></td>
 <td>相同</td>
 </tr>
 <tr>
-<td>&lt; &#x2F; &lt;&#x3D;</td>
+<td><code>&lt; / &lt;=</code></td>
 <td>小于 &#x2F; 小于等于</td>
-<td>score &lt; 60</td>
+<td><code>score &lt; 60</code></td>
 <td>相同</td>
 </tr>
 <tr>
-<td>is</td>
+<td><code>is</code></td>
 <td>同一个对象（身份）</td>
-<td>x is None</td>
+<td><code>x is None</code></td>
 <td>无直接对应</td>
 </tr>
 <tr>
-<td>is not</td>
+<td><code>is not</code></td>
 <td>不是同一个对象</td>
-<td>x is not y</td>
+<td><code>x is not y</code></td>
 <td>无直接对应</td>
 </tr>
 <tr>
-<td>in</td>
+<td><code>in</code></td>
 <td>成员包含</td>
-<td>“a” in “apple”</td>
+<td><code>&quot;a&quot; in &quot;apple&quot;</code></td>
 <td>无直接对应</td>
 </tr>
 <tr>
-<td>not in</td>
+<td><code>not in</code></td>
 <td>不包含</td>
-<td>5 not in [1,2,3]</td>
+<td><code>5 not in [1,2,3]</code></td>
 <td>无直接对应</td>
+</tr>
+</tbody></table>
+<h2 id="常见写法-容易踩的坑"><a href="#常见写法-容易踩的坑" class="headerlink" title="常见写法 &amp; 容易踩的坑"></a>常见写法 &amp; 容易踩的坑</h2><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐写法（Python 风格）</th>
+<th>不推荐 &#x2F; 容易错的写法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>判断是否为空</td>
+<td><code>if not name:</code></td>
+<td><code>if name == &quot;&quot;:</code></td>
+<td>更 Pythonic，适用于 str&#x2F;list&#x2F;tuple&#x2F;dict 等</td>
+</tr>
+<tr>
+<td>判断 None</td>
+<td><code>if result is None:</code></td>
+<td><code>if result == None:</code></td>
+<td>用 <code>is</code> 更安全（虽然很多时候 <code>==</code> 也行）</td>
+</tr>
+<tr>
+<td>多条件优先级</td>
+<td><code>if a &gt; 0 and b &gt; 0 or c &gt; 0:</code></td>
+<td>—</td>
+<td><code>and</code> 优先级高于 <code>or</code>，和 C 一样</td>
+</tr>
+<tr>
+<td>链式比较</td>
+<td><code>if 0 &lt; x &lt; 100:</code></td>
+<td><code>if x &gt; 0 and x &lt; 100:</code></td>
+<td>链式更简洁可读</td>
+</tr>
+<tr>
+<td>否定复杂条件</td>
+<td><code>if not (age &gt;= 18 and has_ticket):</code></td>
+<td>—</td>
+<td><code>not</code> 作用于整个括号</td>
+</tr>
+<tr>
+<td>条件中包含 in &#x2F; not in</td>
+<td><code>if &quot;error&quot; in message.lower():</code></td>
+<td>—</td>
+<td>非常常用，尤其处理字符串和列表</td>
 </tr>
 </tbody></table>
 
