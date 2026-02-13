@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dr34mch41.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="因本人有学习 C&#x2F;C++ 以及信竞等基础，所以很多地方直接略过，使本文中部分基础未提及。请自行查阅。 变量、数据类型、运算符变量声明与赋值Python 不需要写类型，也不需要分号，极大简化。 12345# C&#x2F;C++                           # Pythonint x &#x3D; 10;                      x &#x3D; 10double y &#x3D; 3.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础学习笔记2">
+<meta property="og:url" content="https://dr34mch41.github.io/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/index.html">
+<meta property="og:site_name" content="dr34mch41的部落阁">
+<meta property="og:description" content="因本人有学习 C&#x2F;C++ 以及信竞等基础，所以很多地方直接略过，使本文中部分基础未提及。请自行查阅。 变量、数据类型、运算符变量声明与赋值Python 不需要写类型，也不需要分号，极大简化。 12345# C&#x2F;C++                           # Pythonint x &#x3D; 10;                      x &#x3D; 10double y &#x3D; 3.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-02-13T03:31:09.000Z">
+<meta property="article:modified_time" content="2026-02-13T04:03:53.427Z">
+<meta property="article:author" content="ChaiQinZheng">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dr34mch41.github.io/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://dr34mch41.github.io/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/","path":"2026/02/13/python基础学习笔记2/","title":"python基础学习笔记2"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>python基础学习笔记2 | dr34mch41的部落阁</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">dr34mch41的部落阁</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">只作为记录</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E3%80%81%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">变量、数据类型、运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E4%B8%8E%E8%B5%8B%E5%80%BC"><span class="nav-number">1.1.</span> <span class="nav-text">变量声明与赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E6%B3%95%E6%A0%87%E8%AF%86%E7%AC%A6%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">合法标识符：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%BF%90%E7%AE%97"><span class="nav-number">2.</span> <span class="nav-text">常用运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF"><span class="nav-number">2.1.</span> <span class="nav-text">算术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%94%E8%BE%83"><span class="nav-number">2.2.</span> <span class="nav-text">比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91"><span class="nav-number">2.3.</span> <span class="nav-text">逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BA%AB%E4%BB%BD"><span class="nav-number">2.4.</span> <span class="nav-text">身份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%91%98"><span class="nav-number">2.5.</span> <span class="nav-text">成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E5%A2%9E%E5%BC%BA"><span class="nav-number">2.6.</span> <span class="nav-text">赋值增强</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E8%B5%8B%E5%80%BC"><span class="nav-number">2.7.</span> <span class="nav-text">链式赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E8%B5%8B%E5%80%BC"><span class="nav-number">2.8.</span> <span class="nav-text">多元赋值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%93%E6%B7%B7%E6%B7%86"><span class="nav-number">3.</span> <span class="nav-text">易混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%88%97%E8%A1%A8%E7%9A%84-%E5%92%8C-%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">字符串和列表的 + 和 * 操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E6%AF%94%E8%BE%83%E5%BE%88%E6%96%B9%E4%BE%BF%EF%BC%8C%E4%BD%86%E8%A6%81%E7%90%86%E8%A7%A3%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">5.</span> <span class="nav-text">链式比较很方便，但要理解优先级</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ChaiQinZheng</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dr34mch41.github.io/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ChaiQinZheng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dr34mch41的部落阁">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="python基础学习笔记2 | dr34mch41的部落阁">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python基础学习笔记2
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-02-13 11:31:09 / Modified: 12:03:53" itemprop="dateCreated datePublished" datetime="2026-02-13T11:31:09+08:00">2026-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>因本人有学习 C&#x2F;C++ 以及信竞等基础，所以很多地方直接略过，使本文中部分<strong>基础未提及</strong>。请自行查阅。</p>
+<h1 id="变量、数据类型、运算符"><a href="#变量、数据类型、运算符" class="headerlink" title="变量、数据类型、运算符"></a>变量、数据类型、运算符</h1><h2 id="变量声明与赋值"><a href="#变量声明与赋值" class="headerlink" title="变量声明与赋值"></a>变量声明与赋值</h2><p>Python 不需要写类型，也不需要分号，极大简化。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># C/C++                           # Python</span></span><br><span class="line"><span class="built_in">int</span> x = <span class="number">10</span>;                      x = <span class="number">10</span></span><br><span class="line">double y = <span class="number">3.14</span>;                 y = <span class="number">3.14</span></span><br><span class="line">string name = <span class="string">&quot;Kai&quot;</span>;             name = <span class="string">&quot;Kai&quot;</span></span><br><span class="line"><span class="built_in">bool</span> flag = true;                flag = <span class="literal">True</span>          <span class="comment"># 注意大小写 True/False</span></span><br></pre></td></tr></table></figure>
+<p>同一个变量可以随时改类型（动态类型）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">100</span>          <span class="comment"># 现在是 int</span></span><br><span class="line">x = <span class="string">&quot;hello&quot;</span>      <span class="comment"># 现在变成 str</span></span><br><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]    <span class="comment"># 现在是 list</span></span><br></pre></td></tr></table></figure>
+<h3 id="合法标识符："><a href="#合法标识符：" class="headerlink" title="合法标识符："></a>合法标识符：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">25</span>                <span class="comment"># 普通变量名，最常见</span></span><br><span class="line">user_name = <span class="string">&quot;Alice&quot;</span>     <span class="comment"># 用下划线连接单词，清晰易读</span></span><br><span class="line">_total = <span class="number">100</span>            <span class="comment"># 下划线开头通常表示“内部使用”或“私有”</span></span><br><span class="line">MAX_SIZE = <span class="number">1024</span>         <span class="comment"># 全大写通常表示“常量”（固定不变的值）</span></span><br><span class="line">calculate_area()        <span class="comment"># 函数名，动词+名词</span></span><br><span class="line">StudentInfo             <span class="comment"># 类名，首字母大写（驼峰命名法）</span></span><br><span class="line">__private_var           <span class="comment"># 双下划线开头，有特殊含义</span></span><br></pre></td></tr></table></figure>
+<p>Python 3 允许使用 Unicode 字符作为标识符，可以用中文作为变量名，非 ASCII 标识符也是允许的了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">姓名 = <span class="string">&quot;张三&quot;</span>  <span class="comment"># 合法</span></span><br><span class="line">π = <span class="number">3.14159</span>   <span class="comment"># 合法</span></span><br></pre></td></tr></table></figure>
+<h1 id="常用运算"><a href="#常用运算" class="headerlink" title="常用运算"></a>常用运算</h1><h2 id="算术"><a href="#算术" class="headerlink" title="算术"></a>算术</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+  -  *  /  //  %  **</span><br></pre></td></tr></table></figure>
+<p><code>//</code> 是整除（向下取整）</p>
+<p><code>**</code> 是幂（比 <code>pow()</code> 更常用）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5 // 2 → 2</span><br><span class="line">5 ** 3 → 125</span><br></pre></td></tr></table></figure>
+<h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">==  !=  &gt;  &gt;=  &lt;  &lt;=</span><br></pre></td></tr></table></figure>
+<p>可以链式： <code>1 &lt; x &lt; 10</code> （C++ 不行）</p>
+<h2 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">and</span> <span class="keyword">or</span> <span class="keyword">not</span></span><br></pre></td></tr></table></figure>
+<p><del>牛逼不你大python直接可以用and or not逻辑运算</del></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span> <span class="keyword">and</span> name != <span class="string">&quot;&quot;</span>:</span><br></pre></td></tr></table></figure>
+<p>关键字不是<code>&amp;&amp;  ||  !</code> (C&#x2F;C++)</p>
+<h2 id="身份"><a href="#身份" class="headerlink" title="身份"></a>身份</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">is</span>  /  <span class="keyword">is</span> <span class="keyword">not</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a is None</span><br><span class="line">x is not y</span><br></pre></td></tr></table></figure>
+<p>比较的是对象身份（内存地址），而<code>==</code>是值相等</p>
+<h2 id="成员"><a href="#成员" class="headerlink" title="成员"></a>成员</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">in / not in</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Kai&quot;</span> <span class="keyword">in</span> name_list</span><br><span class="line"><span class="number">5</span> <span class="keyword">in</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="赋值增强"><a href="#赋值增强" class="headerlink" title="赋值增强"></a>赋值增强</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+= -= *= /= //= %= **=</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x += <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>与 C&#x2F;C++ 一样，但没有 <code>++ --</code></p>
+<h2 id="链式赋值"><a href="#链式赋值" class="headerlink" title="链式赋值"></a>链式赋值</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = b = c = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>合法，且常见</p>
+<h2 id="多元赋值"><a href="#多元赋值" class="headerlink" title="多元赋值"></a>多元赋值</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x, y = <span class="number">10</span>, <span class="string">&quot;hello&quot;</span></span><br></pre></td></tr></table></figure>
+<p>非常常用（相当于解包）</p>
+<h1 id="易混淆"><a href="#易混淆" class="headerlink" title="易混淆"></a>易混淆</h1><p>is 和 &#x3D;&#x3D;</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">b = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="built_in">print</span>(a == b)      <span class="comment"># True  （值相等）</span></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> b)      <span class="comment"># False （不是同一个对象）</span></span><br><span class="line"></span><br><span class="line">x = <span class="number">256</span></span><br><span class="line">y = <span class="number">256</span></span><br><span class="line"><span class="built_in">print</span>(x <span class="keyword">is</span> y)      <span class="comment"># 通常 True（小整数缓存）</span></span><br><span class="line"></span><br><span class="line">x = <span class="number">257</span></span><br><span class="line">y = <span class="number">257</span></span><br><span class="line"><span class="built_in">print</span>(x <span class="keyword">is</span> y)      <span class="comment"># 通常 False（大整数不一定缓存）</span></span><br></pre></td></tr></table></figure>
+<h1 id="字符串和列表的-和-操作"><a href="#字符串和列表的-和-操作" class="headerlink" title="字符串和列表的 + 和 * 操作"></a>字符串和列表的 + 和 * 操作</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;ab&quot;</span> + <span class="string">&quot;cd&quot;</span>     <span class="comment"># &quot;abcd&quot;</span></span><br><span class="line"><span class="string">&quot;ha&quot;</span> * <span class="number">3</span>        <span class="comment"># &quot;hahaha&quot;</span></span><br><span class="line"></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>] + [<span class="number">3</span>, <span class="number">4</span>] <span class="comment"># [1,2,3,4]</span></span><br><span class="line">[<span class="number">0</span>] * <span class="number">5</span>         <span class="comment"># [0,0,0,0,0]   ← 非常常用</span></span><br></pre></td></tr></table></figure>
+<p><del>看完我人傻了，还能这么操作,直接领先c++一世纪</del></p>
+<h1 id="链式比较很方便，但要理解优先级"><a href="#链式比较很方便，但要理解优先级" class="headerlink" title="链式比较很方便，但要理解优先级"></a>链式比较很方便，但要理解优先级</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这三个是等价的</span></span><br><span class="line"><span class="number">1</span> &lt; x &lt; <span class="number">10</span></span><br><span class="line">x &gt; <span class="number">1</span> <span class="keyword">and</span> x &lt; <span class="number">10</span></span><br><span class="line"><span class="number">1</span> &lt; x <span class="keyword">and</span> x &lt; <span class="number">10</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="python基础学习笔记">
+                  <i class="fa fa-angle-left"></i> python基础学习笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-1/" rel="next" title="python基础学习笔记2">
+                  python基础学习笔记2 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ChaiQinZheng</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
