@@ -130,7 +130,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -152,6 +152,130 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dr34mch41.github.io/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ChaiQinZheng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dr34mch41的部落阁">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | dr34mch41的部落阁">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/" class="post-title-link" itemprop="url">python基础学习笔记4</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-02-13 16:20:25 / Modified: 16:42:43" itemprop="dateCreated datePublished" datetime="2026-02-13T16:20:25+08:00">2026-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>因本人有学习 C&#x2F;C++ 以及信竞等基础，所以很多地方直接略过，使本文中部分<strong>基础未提及</strong>。请自行查阅。</p>
+<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><h2 id="while"><a href="#while" class="headerlink" title="while"></a>while</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C/C++ 风格</span></span><br><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, i);</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">10</span>:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">    i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>这两份代码做的是完全相同的一件事<br>样例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">input</span>(<span class="string">&quot;请输入正整数：&quot;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="keyword">not</span> n.isdigit() <span class="keyword">or</span> <span class="built_in">int</span>(n) &lt;= <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;输入有误，请重新输入&quot;</span>)</span><br><span class="line">    n = <span class="built_in">input</span>(<span class="string">&quot;请输入正整数：&quot;</span>)</span><br><span class="line">n = <span class="built_in">int</span>(n)</span><br></pre></td></tr></table></figure>
+<h2 id="for-in"><a href="#for-in" class="headerlink" title="for in"></a>for in</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> lst:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+<p>把列表（或任何可迭代的东西）lst 里面的每一个元素，依次取出来，暂时命名为 x，然后对这个 x 做你想做的事情（这里是打印它）。<br>样例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 例子1：数字列表</span></span><br><span class="line">numbers = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>]</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> numbers:</span><br><span class="line">    <span class="built_in">print</span>(num * <span class="number">2</span>)          <span class="comment"># 20 40 60 80</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 例子2：字符串（字符串也是可迭代的）</span></span><br><span class="line"><span class="keyword">for</span> char <span class="keyword">in</span> <span class="string">&quot;Python&quot;</span>:</span><br><span class="line">    <span class="built_in">print</span>(char)             <span class="comment"># 逐个字符打印：P y t h o n</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 例子3：列表里放各种类型</span></span><br><span class="line">mixed = [<span class="number">1</span>, <span class="string">&quot;hello&quot;</span>, <span class="number">3.14</span>, <span class="literal">True</span>]</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> mixed:</span><br><span class="line">    <span class="built_in">print</span>(item)             <span class="comment"># 1  hello  3.14  True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 例子4：什么都不做，只是遍历（常见于&quot;清空&quot;或&quot;计数&quot;）</span></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> lst:              <span class="comment"># _ 表示&quot;我不在乎这个元素是什么&quot;</span></span><br><span class="line">    count += <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;列表里有&quot;</span>, count, <span class="string">&quot;个元素&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="for-in-range"><a href="#for-in-range" class="headerlink" title="for in range"></a>for in range</h2><p>这是 Python 写”计数循环”最常用的方式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># C/C++</span></span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Python 写法（最常见三种）</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):          <span class="comment"># 0,1,2,...,9</span></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>, <span class="number">10</span>):       <span class="comment"># 5,6,7,8,9</span></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">10</span>, <span class="number">2</span>):    <span class="comment"># 0,2,4,6,8   步长=2</span></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>, <span class="number">0</span>, -<span class="number">1</span>):   <span class="comment"># 10,9,8,...,1   倒序</span></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<h1 id="常用写法"><a href="#常用写法" class="headerlink" title="常用写法"></a>常用写法</h1><table>
+<thead>
+<tr>
+<th>想实现的效果</th>
+<th>推荐写法</th>
+<th>说明 &#x2F; 对比 C&#x2F;C++</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>循环 n 次（从 0 开始）</td>
+<td><code>for i in range(n):</code></td>
+<td>相当于 <code>for(int i=0; i&lt;n; i++)</code></td>
+</tr>
+<tr>
+<td>从 1 到 n（包含 n）</td>
+<td><code>for i in range(1, n+1):</code></td>
+<td>很常见，尤其处理 1-based 索引</td>
+</tr>
+<tr>
+<td>倒序 n → 1</td>
+<td><code>for i in range(n, 0, -1):</code></td>
+<td>相当于 <code>for(int i=n; i&gt;=1; i--)</code></td>
+</tr>
+<tr>
+<td>每隔 k 个数</td>
+<td><code>for i in range(0, n, k):</code></td>
+<td>步长 k</td>
+</tr>
+<tr>
+<td>同时遍历索引和元素</td>
+<td><code>for i, v in enumerate(lst):</code></td>
+<td>相当于带下标的循环（很常用）</td>
+</tr>
+<tr>
+<td>同时遍历两个列表</td>
+<td><code>for a, b in zip(list1, list2):</code></td>
+<td>相当于最短的那个列表结束就停止</td>
+</tr>
+<tr>
+<td>遍历字典</td>
+<td><code>for k in d:</code> 或 <code>for k,v in d.items():</code></td>
+<td>默认只遍历 key；用 <code>.items()</code> 拿键值对</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 带索引遍历（超级常用）</span></span><br><span class="line">names = [<span class="string">&quot;Alice&quot;</span>, <span class="string">&quot;Bob&quot;</span>, <span class="string">&quot;Carol&quot;</span>]</span><br><span class="line"><span class="keyword">for</span> i, name <span class="keyword">in</span> <span class="built_in">enumerate</span>(names, start=<span class="number">1</span>):   <span class="comment"># start=1 从1开始编号</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;i&#125;</span>. <span class="subst">&#123;name&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 同时遍历多个序列</span></span><br><span class="line">ids = [<span class="number">101</span>, <span class="number">102</span>, <span class="number">103</span>]</span><br><span class="line">scores = [<span class="number">88</span>, <span class="number">92</span>, <span class="number">75</span>]</span><br><span class="line"><span class="keyword">for</span> id_, score <span class="keyword">in</span> <span class="built_in">zip</span>(ids, scores):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;学号 <span class="subst">&#123;id_&#125;</span> 得分 <span class="subst">&#123;score&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 倒序遍历列表（两种常用写法）</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">reversed</span>(lst):           <span class="comment"># 方法1：推荐</span></span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(lst)-<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">    x = lst[i]</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1005,7 +1129,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h1><p><a href="mailto:&#107;&#x74;&#x64;&#x63;&#x2e;&#x75;&#x73;&#99;&#112;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">ktdc.uscp@gmail.com</a></p>
+          <h1 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h1><p><a href="mailto:&#x6b;&#116;&#x64;&#x63;&#x2e;&#x75;&#x73;&#x63;&#112;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">ktdc.uscp@gmail.com</a></p>
 <h1 id="Team"><a href="#Team" class="headerlink" title="Team"></a><em>Team</em></h1><p><a target="_blank" rel="noopener" href="https://huggingface.co/uscp">huggingface</a><br><a target="_blank" rel="noopener" href="https://github.com/Underground-shit-code-production">github</a></p>
 
       
