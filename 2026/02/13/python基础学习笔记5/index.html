@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dr34mch41.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="因本人有学习 C&#x2F;C++ 以及信竞等基础，所以很多地方直接略过，使本文中部分基础未提及。请自行查阅。 列表123456789101112# 空列表lst &#x3D; []lst &#x3D; list()# 直接写内容（最常用）scores &#x3D; [85, 92, 78, 95]names &#x3D; [&quot;Alice&quot;, &quot;Bob&quot;, &quot;Carol&quot;]mi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础学习笔记5">
+<meta property="og:url" content="https://dr34mch41.github.io/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/index.html">
+<meta property="og:site_name" content="dr34mch41的部落阁">
+<meta property="og:description" content="因本人有学习 C&#x2F;C++ 以及信竞等基础，所以很多地方直接略过，使本文中部分基础未提及。请自行查阅。 列表123456789101112# 空列表lst &#x3D; []lst &#x3D; list()# 直接写内容（最常用）scores &#x3D; [85, 92, 78, 95]names &#x3D; [&quot;Alice&quot;, &quot;Bob&quot;, &quot;Carol&quot;]mi">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-02-13T10:11:05.000Z">
+<meta property="article:modified_time" content="2026-02-13T11:25:36.888Z">
+<meta property="article:author" content="ChaiQinZheng">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dr34mch41.github.io/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://dr34mch41.github.io/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/","path":"2026/02/13/python基础学习笔记5/","title":"python基础学习笔记5"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>python基础学习笔记5 | dr34mch41的部落阁</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">dr34mch41的部落阁</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">只作为记录</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE-%E4%BF%AE%E6%94%B9"><span class="nav-number">1.1.</span> <span class="nav-text">访问 &amp; 修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text">列表操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8"><span class="nav-number">1.3.</span> <span class="nav-text">嵌套列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%AF%94%E8%BE%83"><span class="nav-number">1.4.</span> <span class="nav-text">列表比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E5%87%BD%E6%95%B0"><span class="nav-number">1.5.</span> <span class="nav-text">列表函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="nav-number">1.6.</span> <span class="nav-text">列表常用操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%87%E7%89%87"><span class="nav-number">2.</span> <span class="nav-text">切片</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ChaiQinZheng</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dr34mch41.github.io/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ChaiQinZheng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dr34mch41的部落阁">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="python基础学习笔记5 | dr34mch41的部落阁">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python基础学习笔记5
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-02-13 18:11:05 / Modified: 19:25:36" itemprop="dateCreated datePublished" datetime="2026-02-13T18:11:05+08:00">2026-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>因本人有学习 C&#x2F;C++ 以及信竞等基础，所以很多地方直接略过，使本文中部分<strong>基础未提及</strong>。请自行查阅。</p>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 空列表</span></span><br><span class="line">lst = []</span><br><span class="line">lst = <span class="built_in">list</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 直接写内容（最常用）</span></span><br><span class="line">scores = [<span class="number">85</span>, <span class="number">92</span>, <span class="number">78</span>, <span class="number">95</span>]</span><br><span class="line">names = [<span class="string">&quot;Alice&quot;</span>, <span class="string">&quot;Bob&quot;</span>, <span class="string">&quot;Carol&quot;</span>]</span><br><span class="line">mixed = [<span class="number">1</span>, <span class="string">&quot;hello&quot;</span>, <span class="number">3.14</span>, <span class="literal">True</span>, [<span class="number">10</span>, <span class="number">20</span>]]   <span class="comment"># 可以放不同类型，甚至嵌套列表</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从其他可迭代对象创建</span></span><br><span class="line">chars = <span class="built_in">list</span>(<span class="string">&quot;python&quot;</span>)          <span class="comment"># [&#x27;p&#x27;, &#x27;y&#x27;, &#x27;t&#x27;, &#x27;h&#x27;, &#x27;o&#x27;, &#x27;n&#x27;]</span></span><br><span class="line">zeros = [<span class="number">0</span>] * <span class="number">10</span>                <span class="comment"># [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</span></span><br></pre></td></tr></table></figure>
+<h2 id="访问-修改"><a href="#访问-修改" class="headerlink" title="访问 &amp; 修改"></a>访问 &amp; 修改</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">scores = [<span class="number">85</span>, <span class="number">92</span>, <span class="number">78</span>, <span class="number">95</span>, <span class="number">60</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取值</span></span><br><span class="line"><span class="built_in">print</span>(scores[<span class="number">0</span>])     <span class="comment"># 85</span></span><br><span class="line"><span class="built_in">print</span>(scores[-<span class="number">1</span>])    <span class="comment"># 60     ← 负数索引从右往左数，-1 是最后一个</span></span><br><span class="line"><span class="built_in">print</span>(scores[-<span class="number">2</span>])    <span class="comment"># 95</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改</span></span><br><span class="line">scores[<span class="number">0</span>] = <span class="number">88</span></span><br><span class="line">scores[-<span class="number">1</span>] = <span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 越界会报错（不像 C/C++ 可能段错误或未定义行为）</span></span><br><span class="line"><span class="comment"># scores[100]   # IndexError: list index out of range</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#也可以直接在末尾添加</span></span><br><span class="line">list1 = [<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Runoob&#x27;</span>, <span class="string">&#x27;Taobao&#x27;</span>]</span><br><span class="line">list1.append(<span class="string">&#x27;Baidu&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;更新后的列表 : &quot;</span>, list1)</span><br><span class="line"><span class="comment">#更新后的列表 :  [&#x27;Google&#x27;, &#x27;Runoob&#x27;, &#x27;Taobao&#x27;, &#x27;Baidu&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除列表元素</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">list</span> = [<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Runoob&#x27;</span>, <span class="number">1997</span>, <span class="number">2000</span>]</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;原始列表 : &quot;</span>, <span class="built_in">list</span>)</span><br><span class="line"><span class="keyword">del</span> <span class="built_in">list</span>[<span class="number">2</span>]</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;删除第三个元素 : &quot;</span>, <span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h2><table>
+<thead>
+<tr>
+<th>Python 表达式</th>
+<th>结果</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>len([1, 2, 3])</code></td>
+<td><code>3</code></td>
+<td>长度</td>
+</tr>
+<tr>
+<td><code>[1, 2, 3] + [4, 5, 6]</code></td>
+<td><code>[1, 2, 3, 4, 5, 6]</code></td>
+<td>组合</td>
+</tr>
+<tr>
+<td><code>[&#39;Hi!&#39;] * 2</code></td>
+<td><code>[&#39;Hi!&#39;, &#39;Hi!&#39;]</code></td>
+<td>重复</td>
+</tr>
+<tr>
+<td><code>3 in [1, 2, 3]</code></td>
+<td><code>True</code></td>
+<td>元素是否存在于列表中</td>
+</tr>
+<tr>
+<td><code>for x in [1, 2, 3]: print(x, end=&quot; &quot;)</code></td>
+<td><code>1 2 3</code></td>
+<td>迭代</td>
+</tr>
+</tbody></table>
+<h2 id="嵌套列表"><a href="#嵌套列表" class="headerlink" title="嵌套列表"></a>嵌套列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>]</span><br><span class="line">&gt;&gt;&gt; n = [1, 2, 3]</span><br><span class="line">&gt;&gt;&gt; x = [a, n]</span><br><span class="line">&gt;&gt;&gt; x</span><br><span class="line">[[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>], [1, 2, 3]]</span><br><span class="line">&gt;&gt;&gt; x[0]</span><br><span class="line">[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>]</span><br><span class="line">&gt;&gt;&gt; x[0][1]</span><br><span class="line"><span class="string">&#x27;b&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="列表比较"><a href="#列表比较" class="headerlink" title="列表比较"></a>列表比较</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入 operator 模块</span></span><br><span class="line"><span class="keyword">import</span> operator</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">b = [<span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">c = [<span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;operator.eq(a,b): &quot;</span>, operator.eq(a,b))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;operator.eq(c,b): &quot;</span>, operator.eq(c,b))</span><br></pre></td></tr></table></figure>
+<p>输出如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">operator.eq(a,b):  False</span><br><span class="line">operator.eq(c,b):  True</span><br></pre></td></tr></table></figure>
+<h2 id="列表函数"><a href="#列表函数" class="headerlink" title="列表函数"></a>列表函数</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>len(list)</code></td>
+<td>列表元素个数</td>
+</tr>
+<tr>
+<td><code>max(list)</code></td>
+<td>返回列表元素最大值</td>
+</tr>
+<tr>
+<td><code>min(list)</code></td>
+<td>返回列表元素最小值</td>
+</tr>
+<tr>
+<td><code>list(seq)</code></td>
+<td>将元组转换为列表</td>
+</tr>
+<tr>
+<td><code>list.append(obj)</code></td>
+<td>在列表末尾添加新的对象</td>
+</tr>
+<tr>
+<td><code>list.count(obj)</code></td>
+<td>统计某个元素在列表中出现的次数</td>
+</tr>
+<tr>
+<td><code>list.extend(seq)</code></td>
+<td>在列表末尾一次性追加另一个序列中的多个值</td>
+</tr>
+<tr>
+<td><code>list.index(obj)</code></td>
+<td>从列表中找出某个值第一个匹配项的索引位置</td>
+</tr>
+<tr>
+<td><code>list.insert(index, obj)</code></td>
+<td>将对象插入列表</td>
+</tr>
+<tr>
+<td><code>list.pop([index=-1])</code></td>
+<td>移除列表中的一个元素（默认最后一个），并返回该元素的值</td>
+</tr>
+<tr>
+<td><code>list.remove(obj)</code></td>
+<td>移除列表中某个值的第一个匹配项</td>
+</tr>
+<tr>
+<td><code>list.reverse()</code></td>
+<td>反向列表中元素</td>
+</tr>
+<tr>
+<td><code>list.sort(key=None, reverse=False)</code></td>
+<td>对原列表进行排序</td>
+</tr>
+<tr>
+<td><code>list.clear()</code></td>
+<td>清空列表</td>
+</tr>
+<tr>
+<td><code>list.copy()</code></td>
+<td>复制列表</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="列表常用操作"><a href="#列表常用操作" class="headerlink" title="列表常用操作"></a>列表常用操作</h2><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>写法</th>
+<th>说明&#x2F;C++ vector 对应</th>
+<th>修改原列表</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>追加元素</td>
+<td><code>lst.append(x)</code></td>
+<td><code>push_back()</code></td>
+<td>是</td>
+</tr>
+<tr>
+<td>插入元素</td>
+<td><code>lst.insert(idx, x)</code></td>
+<td><code>insert()</code></td>
+<td>是</td>
+</tr>
+<tr>
+<td>扩展（加多个元素）</td>
+<td><code>lst.extend(iterable)</code><br><code>lst += other</code></td>
+<td><code>insert(end, begin, end)</code> 或 <code>+=</code></td>
+<td>是</td>
+</tr>
+<tr>
+<td>删除指定位置</td>
+<td><code>del lst[idx]</code><br><code>lst.pop(idx)</code></td>
+<td><code>erase()</code></td>
+<td>是</td>
+</tr>
+<tr>
+<td>删除最后一个并返回</td>
+<td><code>x = lst.pop()</code></td>
+<td><code>pop_back()</code> 并返回</td>
+<td>是</td>
+</tr>
+<tr>
+<td>删除第一个匹配</td>
+<td><code>lst.remove(value)</code></td>
+<td><code>find() + erase()</code></td>
+<td>是</td>
+</tr>
+<tr>
+<td>清空</td>
+<td><code>lst.clear()</code></td>
+<td><code>clear()</code></td>
+<td>是</td>
+</tr>
+<tr>
+<td>查找索引</td>
+<td><code>lst.index(value)</code></td>
+<td><code>find() → distance()</code></td>
+<td>否</td>
+</tr>
+<tr>
+<td>计数</td>
+<td><code>lst.count(value)</code></td>
+<td><code>count()</code></td>
+<td>否</td>
+</tr>
+<tr>
+<td>排序（就地）</td>
+<td><code>lst.sort()</code><br><code>lst.sort(reverse=True)</code></td>
+<td><code>std::sort()</code></td>
+<td>是</td>
+</tr>
+<tr>
+<td>排序（返回新列表）</td>
+<td><code>sorted(lst)</code></td>
+<td>创建副本后排序</td>
+<td>否</td>
+</tr>
+<tr>
+<td>反转（就地）</td>
+<td><code>lst.reverse()</code></td>
+<td><code>std::reverse()</code></td>
+<td>是</td>
+</tr>
+<tr>
+<td>长度</td>
+<td><code>len(lst)</code></td>
+<td><code>size()</code></td>
+<td>否</td>
+</tr>
+</tbody></table>
+<h1 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h1><p>切片语法：<code>lst[start:end:step]</code></p>
+<ul>
+<li>start 默认 0</li>
+<li>end 默认到最后（不包含 end）</li>
+<li>step 默认 1</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(nums[<span class="number">2</span>:<span class="number">6</span>])      <span class="comment"># [2,3,4,5]</span></span><br><span class="line"><span class="built_in">print</span>(nums[:<span class="number">4</span>])       <span class="comment"># [0,1,2,3]     ← 从头开始</span></span><br><span class="line"><span class="built_in">print</span>(nums[<span class="number">5</span>:])       <span class="comment"># [5,6,7,8,9]   ← 到最后</span></span><br><span class="line"><span class="built_in">print</span>(nums[::<span class="number">2</span>])      <span class="comment"># [0,2,4,6,8]   ← 隔一个数字</span></span><br><span class="line"><span class="built_in">print</span>(nums[<span class="number">1</span>::<span class="number">2</span>])     <span class="comment"># [1,3,5,7,9]</span></span><br><span class="line"><span class="built_in">print</span>(nums[::-<span class="number">1</span>])     <span class="comment"># [9,8,7,6,5,4,3,2,1,0]  ← 倒序（最常用技巧）</span></span><br><span class="line"><span class="built_in">print</span>(nums[<span class="number">7</span>:<span class="number">2</span>:-<span class="number">1</span>])   <span class="comment"># [7,6,5,4,3]   ← 从 7 到 3（不包含 2）</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/02/13/python%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/" rel="prev" title="python基础学习笔记4">
+                  <i class="fa fa-angle-left"></i> python基础学习笔记4
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ChaiQinZheng</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
