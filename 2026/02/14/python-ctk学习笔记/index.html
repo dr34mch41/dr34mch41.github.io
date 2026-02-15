@@ -20,18 +20,20 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"dr34mch41.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="参考自官方文档. 视频教程yt">
+    <meta name="description" content="参考自官方文档. 视频教程yt 创建基础应用1234import customtkinterapp &#x3D; customtkinter.CTk()app.mainloop() 自定义窗口12345678910111213import customtkinterdef button_callback():    print(&quot;button pressed&quot;)app &#x3D; customt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python-ctk学习笔记">
 <meta property="og:url" content="https://dr34mch41.github.io/2026/02/14/python-ctk%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="dr34mch41的部落阁">
-<meta property="og:description" content="参考自官方文档. 视频教程yt">
+<meta property="og:description" content="参考自官方文档. 视频教程yt 创建基础应用1234import customtkinterapp &#x3D; customtkinter.CTk()app.mainloop() 自定义窗口12345678910111213import customtkinterdef button_callback():    print(&quot;button pressed&quot;)app &#x3D; customt">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://dr34mch41.github.io/images/pyctk1-1.png">
 <meta property="article:published_time" content="2026-02-14T10:01:37.000Z">
-<meta property="article:modified_time" content="2026-02-15T01:39:24.633Z">
+<meta property="article:modified_time" content="2026-02-15T03:13:50.787Z">
 <meta property="article:author" content="ChaiQinZheng">
 <meta property="article:tag" content="ctk">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dr34mch41.github.io/images/pyctk1-1.png">
 
 
 <link rel="canonical" href="https://dr34mch41.github.io/2026/02/14/python-ctk%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -110,7 +112,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -123,6 +125,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%9F%BA%E7%A1%80%E5%BA%94%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">创建基础应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E5%8F%A3"><span class="nav-number">2.</span> <span class="nav-text">自定义窗口</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -203,7 +206,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-15 09:39:24" itemprop="dateModified" datetime="2026-02-15T09:39:24+08:00">2026-02-15</time>
+      <time title="Modified: 2026-02-15 11:13:50" itemprop="dateModified" datetime="2026-02-15T11:13:50+08:00">2026-02-15</time>
     </span>
 
   
@@ -216,6 +219,9 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>参考自<a target="_blank" rel="noopener" href="https://customtkinter.tomschimansky.com/">官方文档</a>. <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Y01r643ckfI">视频教程yt</a></p>
+<h2 id="创建基础应用"><a href="#创建基础应用" class="headerlink" title="创建基础应用"></a>创建基础应用</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> customtkinter</span><br><span class="line"></span><br><span class="line">app = customtkinter.CTk()</span><br><span class="line">app.mainloop()</span><br></pre></td></tr></table></figure>
+<h2 id="自定义窗口"><a href="#自定义窗口" class="headerlink" title="自定义窗口"></a>自定义窗口</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> customtkinter</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">button_callback</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;button pressed&quot;</span>)</span><br><span class="line"></span><br><span class="line">app = customtkinter.CTk()</span><br><span class="line">app.title(<span class="string">&quot;my app&quot;</span>)</span><br><span class="line">app.geometry(<span class="string">&quot;400x150&quot;</span>)</span><br><span class="line"></span><br><span class="line">button = customtkinter.CTkButton(app, text=<span class="string">&quot;my button&quot;</span>, command=button_callback)</span><br><span class="line">button.grid(row=<span class="number">0</span>, column=<span class="number">0</span>, padx=<span class="number">20</span>, pady=<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">app.mainloop()</span><br></pre></td></tr></table></figure>
+<p><img src="/images/pyctk1-1.png" alt="图片" title="1"></p>
 
     </div>
 

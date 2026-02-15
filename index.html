@@ -197,7 +197,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-15 09:39:24" itemprop="dateModified" datetime="2026-02-15T09:39:24+08:00">2026-02-15</time>
+      <time title="Modified: 2026-02-15 11:13:50" itemprop="dateModified" datetime="2026-02-15T11:13:50+08:00">2026-02-15</time>
     </span>
 
   
@@ -211,6 +211,9 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>参考自<a target="_blank" rel="noopener" href="https://customtkinter.tomschimansky.com/">官方文档</a>. <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Y01r643ckfI">视频教程yt</a></p>
+<h2 id="创建基础应用"><a href="#创建基础应用" class="headerlink" title="创建基础应用"></a>创建基础应用</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> customtkinter</span><br><span class="line"></span><br><span class="line">app = customtkinter.CTk()</span><br><span class="line">app.mainloop()</span><br></pre></td></tr></table></figure>
+<h2 id="自定义窗口"><a href="#自定义窗口" class="headerlink" title="自定义窗口"></a>自定义窗口</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> customtkinter</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">button_callback</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;button pressed&quot;</span>)</span><br><span class="line"></span><br><span class="line">app = customtkinter.CTk()</span><br><span class="line">app.title(<span class="string">&quot;my app&quot;</span>)</span><br><span class="line">app.geometry(<span class="string">&quot;400x150&quot;</span>)</span><br><span class="line"></span><br><span class="line">button = customtkinter.CTkButton(app, text=<span class="string">&quot;my button&quot;</span>, command=button_callback)</span><br><span class="line">button.grid(row=<span class="number">0</span>, column=<span class="number">0</span>, padx=<span class="number">20</span>, pady=<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">app.mainloop()</span><br></pre></td></tr></table></figure>
+<p><img src="/images/pyctk1-1.png" alt="图片" title="1"></p>
 
       
     </div>
